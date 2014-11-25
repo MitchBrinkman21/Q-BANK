@@ -1,0 +1,9 @@
+c:\users\sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\bin\Debug\Q-Bank.exe.config
+C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\bin\Debug\Q-Bank.exe
+C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\bin\Debug\Q-Bank.pdb
+C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q-Bank.csprojResolveAssemblyReference.cache
+C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q_Bank.FormMain.resources
+C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q_Bank.Properties.Resources.resources
+C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q-Bank.csproj.GenerateResource.Cache
+C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q-Bank.exe
+C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q-Bank.pdb
