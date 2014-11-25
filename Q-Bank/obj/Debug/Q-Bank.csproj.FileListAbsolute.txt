@@ -7,3 +7,12 @@ C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q_
 C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q-Bank.csproj.GenerateResource.Cache
 C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q-Bank.exe
 C:\Users\Sander\documents\visual studio 2013\Projects\Q-Bank\Q-Bank\obj\Debug\Q-Bank.pdb
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\bin\Debug\Q-Bank.exe.config
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\obj\Debug\Q-Bank.exe
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\obj\Debug\Q-Bank.pdb
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\bin\Debug\Q-Bank.exe
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\bin\Debug\Q-Bank.pdb
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\obj\Debug\Q-Bank.csprojResolveAssemblyReference.cache
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\obj\Debug\Q_Bank.FormMain.resources
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\obj\Debug\Q_Bank.Properties.Resources.resources
+D:\Users\Adriaan\Documents\Git\Q-Bank\trunk\Q-Bank\obj\Debug\Q-Bank.csproj.GenerateResource.Cache
