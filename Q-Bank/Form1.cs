@@ -15,22 +15,64 @@ namespace Q_Bank
         public FormMain()
         {
             InitializeComponent();
+            Home();
+        }
+
+        private void Transaction()
+        {
+                      
+        }
+
+        private void Home()
+        {
             tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            tableLayoutPanel3.CellPaint += tableLayoutPanel3_CellPaint;
-        } 
-
-        private void tableLayoutPanel3_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
-        {
-            e.Graphics.DrawLine(Pens.Black, e.CellBounds.Location, new Point(e.CellBounds.Right, e.CellBounds.Top));
         }
+
+        private void TransactionOverview()
+        {
+
+        }
+
+        private void TransactionStatus()
+        {
+
+        }
+
+
+
+
         private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Wil je afsluiten?", "Aflsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Wil je afsluiten?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes) 
             {
                 Application.Exit();
             }   
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = tabControl1.SelectedIndex;
+            switch (i)
+            {
+                case 0: 
+                    Home();
+                    break;
+                case 1:
+                    Transaction();
+                    break;
+                case 2:
+                    TransactionOverview();
+                    break;
+                case 3:
+                    TransactionStatus();
+                    break;
+                default:
+                    Home();
+                    break;
+            }
+        }
+
     }
 }
