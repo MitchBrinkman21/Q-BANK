@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Q_Bank.Model;
 
 namespace Q_Bank.Controller
 {
@@ -16,30 +17,62 @@ namespace Q_Bank.Controller
         public String password { get; private set; }
         public int port { get; private set; }
         public short connectionStatus { get; private set; }
+        public SqlConnection con { get; set; }
         public DatabaseConnection()
         {
-            databaseSource = "";
-            databaseName = "";
+            databaseSource = "FEIKO-LAPTOP\\SQLEXPRESS";
+            databaseName = "Q_bank";
             username = "sa";
-            password = "";
+            password = "Feiko1337";
         }
 
         public void OpenConnection()
         {
             string connetionString = null;
-            SqlConnection cnn;
             connetionString = "Data Source=" + databaseSource + ";Initial Catalog=" + databaseName + ";User ID=" + username + ";Password=" + password;
-            cnn = new SqlConnection(connetionString);
+            con = new SqlConnection(connetionString);
             try
             {
-                cnn.Open();
-                MessageBox.Show("Connection Open ! ");
-                cnn.Close();
+                con.Open();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Can not open connection ! ");
             }
+        }
+
+        public void CloseConnection()
+        {
+            try
+            {
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! ");
+            }
+        }
+
+        public List<Transaction> TestQuery()
+        {
+            List<Transaction> transactionList = new List<Transaction>();
+            String query = "SELECT * FROM Q_bank.dbo.[transaction]";
+            SqlCommand newQuery = new SqlCommand(query, con);
+            SqlDataReader myReader = null;
+
+            myReader = newQuery.ExecuteReader();
+            while (myReader.Read())
+            {
+                Transaction t = new Transaction();
+                t.Amount = Convert.ToDouble(myReader["amount"]);
+                t.DateTime = Convert.ToDateTime(myReader["datetime"]);
+                t.Commit = Convert.ToBoolean(myReader["commit"]);
+                t.ExecuteDateTime = Convert.ToDateTime(myReader["executeDateTime"]);
+                t.NameReceiver = Convert.ToString(myReader["nameReceiver"]);
+                t.IbanReceiver = Convert.ToString(myReader["ibanReceiver"]);
+                transactionList.Add(t);
+            }
+            return transactionList;
         }
     }
 }

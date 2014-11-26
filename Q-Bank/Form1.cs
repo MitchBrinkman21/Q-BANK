@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Q_Bank.View;
+using Q_Bank.Controller;
+using Q_Bank.Model;
 
 namespace Q_Bank
 {
@@ -31,7 +34,13 @@ namespace Q_Bank
 
         private void TransactionOverview()
         {
-
+            DatabaseConnection db = new DatabaseConnection();
+            db.OpenConnection();
+            List<Transaction> transactionList = db.TestQuery();
+            foreach (Transaction t in transactionList)
+            {
+                MessageBox.Show(t.ToString());
+            }
         }
 
         private void TransactionStatus()
