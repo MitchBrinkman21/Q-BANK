@@ -34,7 +34,7 @@
             this.afsluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
+            this.transactionOverviewLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.transactionButton2 = new System.Windows.Forms.Button();
             this.transactionButton1 = new System.Windows.Forms.Button();
@@ -114,30 +114,30 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(882, 600);
+            this.tabPage4.Size = new System.Drawing.Size(854, 600);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Transactiestatus";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.transactionOverviewLabel);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(882, 600);
+            this.tabPage3.Size = new System.Drawing.Size(854, 600);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Transactieoverzicht";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // transactionOverviewLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(36, 24);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Transactieoverzicht";
+            this.transactionOverviewLabel.AutoSize = true;
+            this.transactionOverviewLabel.Location = new System.Drawing.Point(36, 24);
+            this.transactionOverviewLabel.Name = "transactionOverviewLabel";
+            this.transactionOverviewLabel.Size = new System.Drawing.Size(100, 13);
+            this.transactionOverviewLabel.TabIndex = 0;
+            this.transactionOverviewLabel.Text = "Transactieoverzicht";
             // 
             // tabPage2
             // 
@@ -354,7 +354,7 @@
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage1.Size = new System.Drawing.Size(882, 600);
+            this.tabPage1.Size = new System.Drawing.Size(854, 600);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -566,7 +566,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button transactionButton2;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label transactionOverviewLabel;
     }
 }
 
