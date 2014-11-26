@@ -34,3 +34,6 @@ C:\Users\Feiko\Dropbox\Feiko\Windesheim\Jaar 2\Q-bank\trunk\Q-Bank\obj\Debug\Q-B
 C:\Users\Feiko\Dropbox\Feiko\Windesheim\Jaar 2\Q-bank\trunk\Q-Bank\obj\Debug\Q_Bank.FormMain.resources
 C:\Users\Feiko\Dropbox\Feiko\Windesheim\Jaar 2\Q-bank\trunk\Q-Bank\obj\Debug\Q_Bank.Properties.Resources.resources
 C:\Users\Feiko\Dropbox\Feiko\Windesheim\Jaar 2\Q-bank\trunk\Q-Bank\obj\Debug\Q-Bank.csproj.GenerateResource.Cache
+D:\Users\Adriaan\Documents\SourceTree\Q-Bank\bin\Debug\Q-Bank.exe.config
+D:\Users\Adriaan\Documents\SourceTree\Q-Bank\obj\Debug\Q-Bank.exe
+D:\Users\Adriaan\Documents\SourceTree\Q-Bank\obj\Debug\Q-Bank.pdb
