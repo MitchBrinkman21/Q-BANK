@@ -36,7 +36,11 @@ namespace Q_Bank
 
         private void TransactionStatus()
         {
+            Label b = new Label();
+            b.Text = "asdfesd";
 
+            
+            TransactionStatusTableLayout.Controls.Add(b, 2, 2);
         }
 
 
@@ -72,6 +76,11 @@ namespace Q_Bank
                     Home();
                     break;
             }
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
         }
 
 
