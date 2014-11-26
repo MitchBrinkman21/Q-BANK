@@ -74,5 +74,10 @@ namespace Q_Bank
             }
         }
 
+        private void transactionTableLayoutPanel_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            e.Graphics.DrawLine(Pens.Black, e.CellBounds.Location, new Point(e.CellBounds.Right, e.CellBounds.Top));
+        }
+
     }
 }
