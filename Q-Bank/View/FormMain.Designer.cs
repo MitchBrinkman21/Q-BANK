@@ -886,7 +886,7 @@
         private System.Windows.Forms.Label transactionStatusSaldo;
         private System.Windows.Forms.Button transactionStatusButtonAnnuleren;
         private System.Windows.Forms.Button transactionStatusSelectEverything;
-        private System.Windows.Forms.TableLayoutPanel TransactionStatusTableLayout;
+        public System.Windows.Forms.TableLayoutPanel TransactionStatusTableLayout;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
