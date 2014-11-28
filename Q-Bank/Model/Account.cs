@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Q_Bank.Model
 {
-    class Account
+    public class Account
     {
     }
 }

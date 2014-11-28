@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Q_Bank.Model
 {
-    class Message
+    public class Message
     {
     }
 }
