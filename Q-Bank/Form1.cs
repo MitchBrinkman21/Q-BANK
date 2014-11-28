@@ -46,7 +46,7 @@ namespace Q_Bank
             Label b = new Label();
             b.Text = "asdfesd";
             b.Anchor = AnchorStyles.Left;
-            TransactionStatusTableLayout.Controls.Add(b, 3, 3);
+            TransactionStatusTableLayout.Controls.Add(b, 2, 5);
             //verwijderd de verticale scrollbar
             int vertScrollWidth = SystemInformation.VerticalScrollBarWidth;
             TransactionStatusTableLayout.Padding = new Padding(0, 0, vertScrollWidth, 0);
