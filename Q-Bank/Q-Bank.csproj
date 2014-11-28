@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\DatabaseConnection.cs" />
+    <Compile Include="Controller\Dataset.cs" />
+    <Compile Include="Controller\MainViewController.cs" />
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -60,7 +62,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Message.cs" />
     <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="View\View.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
