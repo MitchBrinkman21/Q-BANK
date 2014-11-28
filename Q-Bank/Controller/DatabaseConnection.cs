@@ -53,7 +53,7 @@ namespace Q_Bank.Controller
             }
         }
 
-        public List<Transaction> TestQuery()
+        /*public List<Transaction> TestQuery()
         {
             List<Transaction> transactionList = new List<Transaction>();
             String query = "SELECT * FROM Q_bank.dbo.[transaction]";
@@ -73,6 +73,6 @@ namespace Q_Bank.Controller
                 transactionList.Add(t);
             }
             return transactionList;
-        }
+        }*/
     }
 }

@@ -36,11 +36,9 @@ namespace Q_Bank
         {
             DatabaseConnection db = new DatabaseConnection();
             db.OpenConnection();
-            List<Transaction> transactionList = db.TestQuery();
-            foreach (Transaction t in transactionList)
-            {
-                MessageBox.Show(t.ToString());
-            }
+            MainViewController mvc = new MainViewController(db.con);
+            mvc.GetAllTransactions();
+            List<Transaction> transactionList = mvc.transactionList;
         }
 
         private void TransactionStatus()
