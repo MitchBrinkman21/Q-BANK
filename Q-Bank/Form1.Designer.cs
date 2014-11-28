@@ -46,7 +46,15 @@
             this.TrasactionStatusDropBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.transactionOverviewTable = new System.Windows.Forms.TableLayoutPanel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.transactionOverviewLabel = new System.Windows.Forms.Label();
+            this.transactionOverviewBalance = new System.Windows.Forms.Label();
+            this.transactionOverviewAccountCombobox = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.transactionButton2 = new System.Windows.Forms.Button();
             this.transactionButton1 = new System.Windows.Forms.Button();
@@ -82,6 +90,7 @@
             this.tabPage4.SuspendLayout();
             this.TransactionStatusTableLayout.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.transactionOverviewTable.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.transactionTableLayoutPanel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -161,6 +170,7 @@
             this.TransactionStatusTableLayout.Controls.Add(this.label13, 3, 0);
             this.TransactionStatusTableLayout.Location = new System.Drawing.Point(49, 111);
             this.TransactionStatusTableLayout.Name = "TransactionStatusTableLayout";
+
             this.TransactionStatusTableLayout.RowCount = 10;
             this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
@@ -170,6 +180,22 @@
             this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+
+            this.TransactionStatusTableLayout.RowCount = 13;
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+
             this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TransactionStatusTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TransactionStatusTableLayout.Size = new System.Drawing.Size(750, 228);
@@ -288,7 +314,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.transactionOverviewTable);
             this.tabPage3.Controls.Add(this.transactionOverviewLabel);
+            this.tabPage3.Controls.Add(this.transactionOverviewBalance);
+            this.tabPage3.Controls.Add(this.transactionOverviewAccountCombobox);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -297,14 +326,126 @@
             this.tabPage3.Text = "Transactieoverzicht";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // transactionOverviewTable
+            // 
+            this.transactionOverviewTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transactionOverviewTable.AutoScroll = true;
+            this.transactionOverviewTable.BackColor = System.Drawing.Color.Transparent;
+            this.transactionOverviewTable.ColumnCount = 5;
+            this.transactionOverviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.transactionOverviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.transactionOverviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.transactionOverviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.transactionOverviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.transactionOverviewTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.transactionOverviewTable.Controls.Add(this.label19, 0, 0);
+            this.transactionOverviewTable.Controls.Add(this.label20, 1, 0);
+            this.transactionOverviewTable.Controls.Add(this.label21, 2, 0);
+            this.transactionOverviewTable.Controls.Add(this.label17, 3, 0);
+            this.transactionOverviewTable.Controls.Add(this.label16, 4, 0);
+            this.transactionOverviewTable.Location = new System.Drawing.Point(39, 87);
+            this.transactionOverviewTable.Name = "transactionOverviewTable";
+            this.transactionOverviewTable.RowCount = 13;
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.transactionOverviewTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.transactionOverviewTable.Size = new System.Drawing.Size(750, 228);
+            this.transactionOverviewTable.TabIndex = 3;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 3);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(38, 13);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Datum";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Location = new System.Drawing.Point(91, 3);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 13);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Van rekening";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Location = new System.Drawing.Point(267, 3);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(67, 13);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Omschrijving";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(443, 3);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 13);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Bij/af";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(663, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 13);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "Bedrag";
+            // 
             // transactionOverviewLabel
             // 
             this.transactionOverviewLabel.AutoSize = true;
-            this.transactionOverviewLabel.Location = new System.Drawing.Point(36, 24);
+            this.transactionOverviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionOverviewLabel.Location = new System.Drawing.Point(35, 24);
             this.transactionOverviewLabel.Name = "transactionOverviewLabel";
-            this.transactionOverviewLabel.Size = new System.Drawing.Size(100, 13);
+            this.transactionOverviewLabel.Size = new System.Drawing.Size(165, 20);
             this.transactionOverviewLabel.TabIndex = 0;
             this.transactionOverviewLabel.Text = "Transactieoverzicht";
+            // 
+            // transactionOverviewBalance
+            // 
+            this.transactionOverviewBalance.AutoSize = true;
+            this.transactionOverviewBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionOverviewBalance.Location = new System.Drawing.Point(493, 60);
+            this.transactionOverviewBalance.Name = "transactionOverviewBalance";
+            this.transactionOverviewBalance.Size = new System.Drawing.Size(70, 13);
+            this.transactionOverviewBalance.TabIndex = 5;
+            this.transactionOverviewBalance.Text = "Saldo: € 0,00";
+            // 
+            // transactionOverviewAccountCombobox
+            // 
+            this.transactionOverviewAccountCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionOverviewAccountCombobox.FormattingEnabled = true;
+            this.transactionOverviewAccountCombobox.Location = new System.Drawing.Point(39, 60);
+            this.transactionOverviewAccountCombobox.Name = "transactionOverviewAccountCombobox";
+            this.transactionOverviewAccountCombobox.Size = new System.Drawing.Size(363, 21);
+            this.transactionOverviewAccountCombobox.TabIndex = 4;
             // 
             // tabPage2
             // 
@@ -682,6 +823,8 @@
             this.TransactionStatusTableLayout.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.transactionOverviewTable.ResumeLayout(false);
+            this.transactionOverviewTable.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.transactionTableLayoutPanel3.ResumeLayout(false);
@@ -750,6 +893,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TableLayoutPanel transactionOverviewTable;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label transactionOverviewBalance;
+        private System.Windows.Forms.ComboBox transactionOverviewAccountCombobox;
     }
 }
 
