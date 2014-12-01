@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,20 +53,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\DatabaseConnection.cs" />
-    <Compile Include="Controller\Dataset.cs" />
+    <Compile Include="account.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="accounttype.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="address.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controller\MainViewController.cs" />
-    <Compile Include="Model\TransactionStuatusModel.cs" />
+    <Compile Include="email.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="loginlog.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="message.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="phone.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="phonetype.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QBANK.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QBANK.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QBANK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QBANK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QBANK.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="role.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transaction.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transactionstatu.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transactiontype.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>QBANK.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Account.cs" />
-    <Compile Include="Model\Message.cs" />
-    <Compile Include="Model\Transaction.cs" />
-    <Compile Include="Model\User.cs" />
     <Compile Include="View\TabTransaction.cs" />
     <Compile Include="View\TabTransactionOverview.cs" />
     <Compile Include="View\TabTransactionStatus.cs" />
@@ -76,6 +141,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,11 +151,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="QBANK.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QBANK.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QBANK.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QBANK.edmx</DependentUpon>
+      <LastGenOutput>QBANK.Context.cs</LastGenOutput>
+    </None>
+    <None Include="QBANK.edmx.diagram">
+      <DependentUpon>QBANK.edmx</DependentUpon>
+    </None>
+    <None Include="QBANK.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QBANK.edmx</DependentUpon>
+      <LastGenOutput>QBANK.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

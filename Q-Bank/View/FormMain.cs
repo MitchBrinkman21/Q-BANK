@@ -9,23 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Q_Bank.View;
 using Q_Bank.Controller;
-using Q_Bank.Model;
 using System.Data.SqlClient;
 
 namespace Q_Bank
 {
     public partial class FormMain : Form
     {
-        public SqlConnection con { get; set; }
         public MainViewController mvc { get; set; }
         public FormMain()
         {
-            DatabaseConnection db = new DatabaseConnection();
-            db.OpenConnection();
-            con = db.con;
-
-            mvc = new MainViewController(con);
-
             InitializeComponent();
             Home();
         }
