@@ -15,8 +15,19 @@ namespace Q_Bank.View
         {
             tsm = new Model.TransactionStuatusModel();
             this.FormMain = FormMain;
+
+            FillTable();
             
-            for (int i = 0; i < 50; i++)
+            //verwijderd de verticale scrollbar
+            int vertScrollWidth = SystemInformation.VerticalScrollBarWidth;
+            FormMain.TransactionStatusTableLayout.Padding = new Padding(0, 0, vertScrollWidth, 0);
+        }
+
+        private void FillTable()
+        {
+            tsm.tegenRekening.Clear();
+            tsm.uitvoerDatums.Clear();
+            for (int i = 0; i < 500; i++)
             {
                 var temp = new Label();
                 temp.Text = "01-12-2014";
@@ -30,10 +41,6 @@ namespace Q_Bank.View
                 FormMain.TransactionStatusTableLayout.Controls.Add(temp, 2, i + 2);
                 tsm.tegenRekening.Add(temp);
             }
-            
-            //verwijderd de verticale scrollbar
-            int vertScrollWidth = SystemInformation.VerticalScrollBarWidth;
-            FormMain.TransactionStatusTableLayout.Padding = new Padding(0, 0, vertScrollWidth, 0);
         }
     }
 }
