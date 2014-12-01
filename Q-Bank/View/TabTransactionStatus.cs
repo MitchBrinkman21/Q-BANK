@@ -10,13 +10,27 @@ namespace Q_Bank.View
     public class TabTransactionStatus
     {
         public FormMain FormMain { get; set; }
+        private Model.TransactionStuatusModel tsm;
         public TabTransactionStatus(FormMain FormMain)
         {
+            tsm = new Model.TransactionStuatusModel();
             this.FormMain = FormMain;
-            Label b = new Label();
-            b.Text = "asdfesd";
-            b.Anchor = AnchorStyles.Left;
-            FormMain.TransactionStatusTableLayout.Controls.Add(b, 2, 5);
+            
+            for (int i = 0; i < 50; i++)
+            {
+                var temp = new Label();
+                temp.Text = "01-12-2014";
+                temp.Anchor = AnchorStyles.Left;
+                FormMain.TransactionStatusTableLayout.Controls.Add(temp, 1, i + 2);
+                tsm.uitvoerDatums.Add(temp);
+
+                temp = new Label();
+                temp.Text = "Belansingdienst NL86 INGB 0002 4455 88";
+                temp.Anchor = AnchorStyles.Left;
+                FormMain.TransactionStatusTableLayout.Controls.Add(temp, 2, i + 2);
+                tsm.tegenRekening.Add(temp);
+            }
+            
             //verwijderd de verticale scrollbar
             int vertScrollWidth = SystemInformation.VerticalScrollBarWidth;
             FormMain.TransactionStatusTableLayout.Padding = new Padding(0, 0, vertScrollWidth, 0);

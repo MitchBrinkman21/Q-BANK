@@ -47,6 +47,7 @@
     <Compile Include="Controller\DatabaseConnection.cs" />
     <Compile Include="Controller\Dataset.cs" />
     <Compile Include="Controller\MainViewController.cs" />
+    <Compile Include="Model\TransactionStuatusModel.cs" />
     <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
